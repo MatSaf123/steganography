@@ -29,6 +29,8 @@ def create_image(message, path) -> None:
     assert image_size >= bits_in_msg, 'Image is too small or message is too long.'
     pixels = np.array(img)
 
+    print(pixels[0])
+
     # clear last bits in 'Red' value of image pixels
     new_pixel_set = []
     for column in np.array(pixels):
@@ -38,11 +40,17 @@ def create_image(message, path) -> None:
         new_pixel_set.append(new_column)
     pixels = new_pixel_set
 
+    print(pixels[0])
+
     # save text bits on the last bits in 'Red' value of image pixels
     for i, bit in enumerate(bits_provider(message)):
         row = i // image_height
         col = i % image_width
         pixels[row][col][0] = (pixels[row][col][0]) | (bit << 0)
+
+
+    print('after encoding')
+    print(pixels[0])
 
     img = Image.fromarray(np.uint8(pixels))
     img.save(path)
@@ -60,6 +68,8 @@ def decode_image(path):
     image_width = img.width
     image_height = img.height
     pixels = np.array(img)
+
+    print(pixels[0])
     bits = []
 
     for i in range(image_height):

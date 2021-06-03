@@ -37,7 +37,7 @@ def encode():
         # STEGANOGRAPHY
 
         secret_message = request.form['secret_message']
-        print('secret message:', secret_message)
+
         base_image_path = path
         create_image(secret_message, base_image_path)
 

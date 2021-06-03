@@ -2,9 +2,13 @@
 {% block content %}
     <h1>Encode</h1>
     <form method=post enctype=multipart/form-data action="{{ url_for('encode') }}">
-        <label for="img">Select image:</label>
+
+        <label for="secret_message">Enter secret message:</label>
         <input type="text" id="secret_message" name="secret_message">
+
+        <label for="img">Select image:</label>
         <input type="file" id="image" name="image" accept="image/*">
+
         <input type="submit">
     </form>
 {% endblock content %}
