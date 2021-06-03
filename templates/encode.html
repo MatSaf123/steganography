@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Encode</h1>
+    <form method=post enctype=multipart/form-data action="{{ url_for('encode') }}">
+        <label for="img">Select image:</label>
+        <input type="text" id="secret_message" name="secret_message">
+        <input type="file" id="image" name="image" accept="image/*">
+        <input type="submit">
+    </form>
+{% endblock content %}
