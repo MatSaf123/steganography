@@ -1,6 +1,16 @@
 # Steganography Flask app
 
+<p float="left">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/MatSaf123/steganography?style=plastic"/>
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MatSaf123/steganography?style=plastic"/>
+</p>
+
+
 #### Basic steganography app able to hide text message in an image, created as a part of Cryptography classes.
+
+<p align="center">    <img src="static/steganography.gif" width="95%" height="95%">
+</p>
+
 
 Run with:
 ```python
@@ -11,7 +21,7 @@ Run with:
 - user able to upload picture of his own choice
 - user able to decrypt image
 
-#### Still under developement. TO DOs:
+#### Still under developement. TODOs:
 
 - all photo file formats handling (for now, only PNG is tested and works)
 - encrypting cleartext before hiding it in image with various algorithms

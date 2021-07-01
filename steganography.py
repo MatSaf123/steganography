@@ -48,7 +48,6 @@ def create_image(message, path) -> None:
         col = i % image_width
         pixels[row][col][0] = (pixels[row][col][0]) | (bit << 0)
 
-
     print('after encoding')
     print(pixels[0])
 
